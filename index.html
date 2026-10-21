@@ -241,6 +241,21 @@ footer p{margin:0;letter-spacing:.06em}
 .blog-card h3{font-family:var(--serif);font-size:19px;color:var(--brown-deep);margin:4px 0 6px;line-height:1.5}
 .blog-card p{margin:0;font-size:14px;color:var(--muted);line-height:1.8}
 @media (max-width:600px){.blog-card{grid-template-columns:1fr}}
+.st-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media (max-width:900px){.st-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:600px){.st-grid{grid-template-columns:repeat(2,1fr);gap:12px}.st-card{padding:10px 10px 14px}.st-card h3{font-size:17px}}
+.st-card{background:#fff;border:1px solid var(--gold-soft);border-radius:10px;padding:14px 14px 18px}
+.st-ph{aspect-ratio:3/4;overflow:hidden;border-radius:6px;background:var(--cream-2)}
+.st-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.st-role{margin:12px 0 0;font-size:12px;letter-spacing:.12em;color:var(--gold);font-weight:700}
+.st-card h3{font-size:20px;color:var(--brown-deep);margin:2px 0 4px}
+.st-lic{margin:0 0 6px;font-size:12.5px;color:var(--brown);font-weight:700;line-height:1.6}
+.st-k{margin:10px 0 4px;font-size:11.5px;color:var(--muted);letter-spacing:.1em}
+.st-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.st-tags li{font-size:12.5px;border:1px solid var(--gold-soft);border-radius:999px;padding:2px 10px;color:var(--brown-deep);background:var(--paper)}
+.st-owner{margin:12px 0 0;font-size:13px;line-height:1.75;color:var(--ink);background:var(--paper);border-left:3px solid var(--gold);padding:8px 10px;border-radius:0 6px 6px 0}
+.st-owner span{display:block;font-size:11px;color:var(--gold);font-weight:700;letter-spacing:.1em;margin-bottom:2px}
+.st-msg{margin:12px 0 0;font-size:13.5px;line-height:1.8;color:var(--ink)}
 </style>
 </head>
 <body>
@@ -252,6 +267,7 @@ footer p{margin:0;letter-spacing:.06em}
       <a href="#concept">コンセプト</a>
       <a href="#gallery">スタイルギャラリー</a>
       <a href="#ceremony">成人式・ブライダル</a>
+      <a href="#staff">スタッフ</a>
       <a href="#menu">メニュー</a>
       <a href="#access">店舗情報</a>
       <a href="blog/index.html">ブログ</a>
@@ -369,6 +385,44 @@ footer p{margin:0;letter-spacing:.06em}
     <div class="ceremony-photos">
       <img src="img/kimono1.jpg" alt="振袖の着付けとヘアセットの仕上がり" loading="lazy">
       <img src="img/kimono2.jpg" alt="振袖にヘアセットを合わせた後ろ姿" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="staff" id="staff" style="padding:64px 0">
+  <div class="wrap">
+    <div class="sec-head"><h2>スタッフ紹介</h2><p>STAFF</p></div>
+    <div class="st-grid">
+      <article class="st-card">
+        <div class="st-ph"><img src="img/staff/kouichi.webp" alt="KOUICHI" loading="lazy"></div>
+        <p class="st-role">オーナースタイリスト</p><h3>KOUICHI</h3>
+        <p class="st-k">得意な技術</p><ul class="st-tags"><li>ストカール（くせ毛を活かす）</li><li>ブリーチなしの白髪ぼかし</li><li>カラー</li><li>パーマ</li><li>カット</li></ul>
+        <p class="st-owner"><span>自己紹介</span>オフコース代表のKOUICHIです。37年の経験をもとに、髪と頭皮をできるだけ傷めない施術を心がけています。得意なのは、くせ毛を活かしたストカール（ストレートパーマと毛先のパーマを同時にかける施術）。白髪ぼかしはブリーチを使わず、ご来店のたびに少しずつ明るさや色味を出して「育てていく」染め方で、色持ち・艶・質感のよい髪に仕上げます。髪のお悩み、なんでもご相談ください。</p>
+      </article>
+      <article class="st-card">
+        <div class="st-ph"><img src="img/staff/nakamoto.webp" alt="中元 香" loading="lazy"></div>
+        <p class="st-role">着付け・ブライダル</p><h3>中元 香</h3><p class="st-lic">1級着付け技能士／ブライダルコーディネーター</p>
+        <p class="st-k">得意な技術</p><ul class="st-tags"><li>振袖・訪問着の着付け</li><li>ブライダルコーディネート</li><li>フォト・ロケーションウエディング</li><li>ホテルウエディング</li><li>フェイシャル・デコルテエステ</li><li>ブライダルエステ</li></ul>
+        <p class="st-owner"><span>自己紹介</span>中元 香です。1級着付け技能士・ブライダルコーディネーターとして、成人式や前撮りの着付けのほか、フォトウエディングやロケーションウエディング、鹿児島市内のホテルウエディングも数多く担当してきました。自由が丘クリニックの化粧品を使ったデコルテから上のエステや、ご結婚式前のブライダルエステも行っています（個室完備）。なんでもお気軽にお尋ねください。</p>
+      </article>
+      <article class="st-card">
+        <div class="st-ph"><img src="img/staff/koba.webp" alt="木場 小百合" loading="lazy"></div>
+        <p class="st-role">スタイリスト</p><h3>木場 小百合</h3>
+        <p class="st-k">得意な技術</p><ul class="st-tags"><li>白髪ぼかし</li><li>アップスタイル・ヘアセット</li><li>新日本髪</li><li>七五三のセット・アップ</li><li>ロングのハイレイヤーカット</li><li>カット・パーマ・カラー</li></ul>
+        <p class="st-owner"><span>自己紹介</span>木場 小百合です。カット・パーマ・カラーのほか、白髪ぼかしや、洋風・和風のアップスタイル・ヘアセットを得意としています。特に新日本髪や七五三のセット・アップはおまかせください。カットではロングのハイレイヤーが得意です。毎日のお手入れがしやすいスタイルをご提案しますので、ぜひご相談ください。</p>
+      </article>
+      <article class="st-card">
+        <div class="st-ph"><img src="img/staff/kiwaki.webp" alt="木脇 麻未" loading="lazy"></div>
+        <p class="st-role">スタイリスト</p><h3>木脇 麻未</h3>
+        <p class="st-k">得意な技術</p><ul class="st-tags"><li>ナチュラルな癒し系スタイル</li><li>ヘッドスパ</li><li>トリートメント調合</li><li>セット・アップ・着付け</li><li>カット・パーマ・カラー</li></ul>
+        <p class="st-owner"><span>自己紹介</span>木脇 麻未です。ママさん美容師をしています。ナチュラルで癒し系のヘアスタイルが得意です。お話ししながら、かわいい・かっこいいスタイルを一緒に楽しく作っていけたらうれしいです。ヘッドスパや、髪をきれいにするトリートメントの調合も得意。セット・アップや着付けもいたします。</p>
+      </article>
+      <article class="st-card">
+        <div class="st-ph"><img src="img/staff/moromugi.webp" alt="諸麦 有泉" loading="lazy"></div>
+        <p class="st-role">スタイリスト</p><h3>諸麦 有泉</h3>
+        <p class="st-k">得意な技術</p><ul class="st-tags"><li>スキャルプエステ（ヘッドスパ）</li><li>ホイルワークのデザインカラー</li><li>透明感カラー</li><li>メイク</li><li>カット・パーマ・カラー</li></ul>
+        <p class="st-owner"><span>自己紹介</span>諸麦 有泉です。2児のママさん美容師で、スキャルプエステ（ヘッドスパ）が得意な「癒し美容師」を目指しています。ホイルワークを使ったデザインカラーや透明感のあるカラー、メイクも得意です。ゆっくりくつろげる時間をお届けします。</p>
+      </article>
     </div>
   </div>
 </section>
