@@ -27,7 +27,7 @@ html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavio
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:var(--brown)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.5;margin:0}
@@ -256,13 +256,14 @@ footer p{margin:0;letter-spacing:.06em}
 .st-owner{margin:12px 0 0;font-size:13px;line-height:1.75;color:var(--ink);background:var(--paper);border-left:3px solid var(--gold);padding:8px 10px;border-radius:0 6px 6px 0}
 .st-owner span{display:block;font-size:11px;color:var(--gold);font-weight:700;letter-spacing:.1em;margin-bottom:2px}
 .st-msg{margin:12px 0 0;font-size:13.5px;line-height:1.8;color:var(--ink)}
+behold-widget{display:block;min-height:320px}
 </style>
 </head>
 <body>
 
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="TOTAL BEAUTY DESIGN オフコース トップへ"><img src="img/logo.webp" alt="TOTAL BEAUTY DESIGN OFF COURSE"></a>
+    <a class="brand" href="#top" aria-label="TOTAL BEAUTY DESIGN オフコース トップへ"><img src="img/logo.webp" alt="TOTAL BEAUTY DESIGN OFF COURSE" width="1200" height="484"></a>
     <nav class="nav" aria-label="ページ内メニュー">
       <a href="#concept">コンセプト</a>
       <a href="#gallery">スタイルギャラリー</a>
@@ -301,28 +302,28 @@ footer p{margin:0;letter-spacing:.06em}
     <p class="lead">カット・パーマ・カラーの仕上がりを、正面・横・後ろの三方向から、似合わせの仕上がりをご覧ください。</p>
     <div class="gal-grid">
       <figure class="model">
-        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s01-front.webp" alt="スタイル1 正面" loading="lazy"></span></span></div>
-        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s01-side.webp" alt="スタイル1 横" loading="lazy"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s01-back.webp" alt="スタイル1 後ろ" loading="lazy"></span></span></div>
+        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s01-front.webp" alt="スタイル1 正面" loading="lazy" width="720" height="960"></span></span></div>
+        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s01-side.webp" alt="スタイル1 横" loading="lazy" width="480" height="640"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s01-back.webp" alt="スタイル1 後ろ" loading="lazy" width="480" height="640"></span></span></div>
       </figure>
       <figure class="model">
-        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s02-front.webp" alt="スタイル2 正面" loading="lazy"></span></span></div>
-        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s02-side.webp" alt="スタイル2 横" loading="lazy"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s02-back.webp" alt="スタイル2 後ろ" loading="lazy"></span></span></div>
+        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s02-front.webp" alt="スタイル2 正面" loading="lazy" width="720" height="960"></span></span></div>
+        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s02-side.webp" alt="スタイル2 横" loading="lazy" width="480" height="640"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s02-back.webp" alt="スタイル2 後ろ" loading="lazy" width="480" height="640"></span></span></div>
       </figure>
       <figure class="model">
-        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s03-front.webp" alt="スタイル3 正面" loading="lazy"></span></span></div>
-        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s03-side.webp" alt="スタイル3 横" loading="lazy"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s03-back.webp" alt="スタイル3 後ろ" loading="lazy"></span></span></div>
+        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s03-front.webp" alt="スタイル3 正面" loading="lazy" width="720" height="960"></span></span></div>
+        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s03-side.webp" alt="スタイル3 横" loading="lazy" width="480" height="640"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s03-back.webp" alt="スタイル3 後ろ" loading="lazy" width="480" height="640"></span></span></div>
       </figure>
       <figure class="model">
-        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s04-front.webp" alt="スタイル4 正面" loading="lazy"></span></span></div>
-        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s04-side.webp" alt="スタイル4 横" loading="lazy"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s04-back.webp" alt="スタイル4 後ろ" loading="lazy"></span></span></div>
+        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s04-front.webp" alt="スタイル4 正面" loading="lazy" width="720" height="960"></span></span></div>
+        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s04-side.webp" alt="スタイル4 横" loading="lazy" width="480" height="640"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s04-back.webp" alt="スタイル4 後ろ" loading="lazy" width="480" height="640"></span></span></div>
       </figure>
       <figure class="model">
-        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s05-front.webp" alt="スタイル5 正面" loading="lazy"></span></span></div>
-        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s05-side.webp" alt="スタイル5 横" loading="lazy"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s05-back.webp" alt="スタイル5 後ろ" loading="lazy"></span></span></div>
+        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s05-front.webp" alt="スタイル5 正面" loading="lazy" width="720" height="960"></span></span></div>
+        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s05-side.webp" alt="スタイル5 横" loading="lazy" width="480" height="640"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s05-back.webp" alt="スタイル5 後ろ" loading="lazy" width="480" height="640"></span></span></div>
       </figure>
       <figure class="model">
-        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s06-front.webp" alt="スタイル6 正面" loading="lazy"></span></span></div>
-        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s06-side.webp" alt="スタイル6 横" loading="lazy"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s06-back.webp" alt="スタイル6 後ろ" loading="lazy"></span></span></div>
+        <div class="front"><span class="fr"><span class="fr2"><img src="img/gallery/s06-front.webp" alt="スタイル6 正面" loading="lazy" width="720" height="960"></span></span></div>
+        <div class="pair"><span class="fr"><span class="fr2"><img src="img/gallery/s06-side.webp" alt="スタイル6 横" loading="lazy" width="480" height="640"></span></span><span class="fr"><span class="fr2"><img src="img/gallery/s06-back.webp" alt="スタイル6 後ろ" loading="lazy" width="480" height="640"></span></span></div>
       </figure>
     </div>
     <div class="more-wrap"><a class="more-btn" href="gallery.html">ヘアスタイルをもっと見る／着物・成人式の写真を見る</a></div>
@@ -334,15 +335,15 @@ footer p{margin:0;letter-spacing:.06em}
   <div class="wrap">
     <div class="sec-head"><h2>ブログ</h2><p>BLOG</p></div>
     <ul class="blog-list">
-      <li><a class="blog-card" href="blog/pc-color-shiraga.html"><img src="img/blog/pc-after-front.webp" alt="">
+      <li><a class="blog-card" href="blog/pc-color-shiraga.html"><img src="img/blog/pc-after-front.webp" alt="" width="900" height="1200">
       <div><p class="post-date">2026.10.19</p><h3>ブリーチなし・ワンステップで、透明感のある白髪ぼかしカラー</h3><p>通常のカラー剤にPCパウダーを混ぜて1回で。髪と頭皮にやさしく、2ステップより約3,000円お得で時短にも。</p></div></a></li>
-      <li><a class="blog-card" href="blog/furisode-maedori.html"><img src="img/blog/furisode-01.webp" alt="">
+      <li><a class="blog-card" href="blog/furisode-maedori.html"><img src="img/blog/furisode-01.webp" alt="" width="1400" height="933">
       <div><p class="post-date">2026.10.18</p><h3>和傘と振袖で、思い出に残る前撮り・後撮りを</h3><p>最近増えている、外での前撮り・後撮り。ヘアセット・着付け・メイクから撮影まで、まとめてお任せいただけます。</p></div></a></li>
-      <li><a class="blog-card" href="blog/style-handsome-short.html"><img src="img/gallery/s13-front.webp" alt="">
+      <li><a class="blog-card" href="blog/style-handsome-short.html"><img src="img/gallery/s13-front.webp" alt="" width="720" height="960">
       <div><p class="post-date">2026.10.16</p><h3>ブリーチなしで白髪をぼかす、ハンサムショート</h3><p>PCパウダーを使ったワンメイクのグレイカラーで、白髪を目立たなく。プレブリーチなしで、ダメージと褪色を抑えました。</p></div></a></li>
-      <li><a class="blog-card" href="blog/campaign-37th.html"><img src="img/interior.webp" alt="">
+      <li><a class="blog-card" href="blog/campaign-37th.html"><img src="img/interior.webp" alt="" width="1400" height="932">
       <div><p class="post-date">2026.10.16</p><h3>ホームページを新しくしました ＆ 37周年感謝キャンペーンのお知らせ</h3><p>10月20日〜11月21日、技術メニュー20%OFFなどの感謝キャンペーンを行います。ブログも始めました。</p></div></a></li>
-      <li><a class="blog-card" href="blog/38th-anniversary.html"><img src="img/store.jpg" alt="">
+      <li><a class="blog-card" href="blog/38th-anniversary.html"><img src="img/store.jpg" alt="" width="800" height="533">
       <div><p class="post-date">2026.10.14</p><h3>おかげさまで、オフコースは38年目を迎えました</h3><p>平成元年10月13日のオープンから37年。4つの場所で歩んできた日々と、感謝の気持ちを綴りました。</p></div></a></li>
     </ul>
     <div class="more-wrap"><a class="more-btn" href="blog/index.html">ブログ一覧を見る</a></div>
@@ -376,15 +377,15 @@ footer p{margin:0;letter-spacing:.06em}
       </ul>
       <p class="cert">着付けは国家資格【1級着付け技能士】が担当いたします</p>
       <figure class="cert-fig">
-        <button type="button" class="cert-btn" aria-label="合格証書を拡大"><img src="img/certificate.jpg" alt="一級技能検定合格証書（着付け）厚生労働大臣" loading="lazy"></button>
+        <button type="button" class="cert-btn" aria-label="合格証書を拡大"><img src="img/certificate.jpg" alt="一級技能検定合格証書（着付け）厚生労働大臣" loading="lazy" width="1200" height="976"></button>
         <figcaption>厚生労働省 技能検定「着付け」1級 合格証書<br><small>※証書番号・生年月日は伏せています</small></figcaption>
       </figure>
       <p class="tail">料金・詳細はお問合せください。　担当：中元</p>
       <p style="margin-top:18px"><a class="more-btn" href="gallery.html#kimono">着物・成人式の仕上がり写真を見る</a></p>
     </div>
     <div class="ceremony-photos">
-      <img src="img/kimono1.jpg" alt="振袖の着付けとヘアセットの仕上がり" loading="lazy">
-      <img src="img/kimono2.jpg" alt="振袖にヘアセットを合わせた後ろ姿" loading="lazy">
+      <img src="img/kimono1.jpg" alt="振袖の着付けとヘアセットの仕上がり" loading="lazy" width="733" height="1100">
+      <img src="img/kimono2.jpg" alt="振袖にヘアセットを合わせた後ろ姿" loading="lazy" width="733" height="1100">
     </div>
   </div>
 </section>
@@ -394,31 +395,31 @@ footer p{margin:0;letter-spacing:.06em}
     <div class="sec-head"><h2>スタッフ紹介</h2><p>STAFF</p></div>
     <div class="st-grid">
       <article class="st-card">
-        <div class="st-ph"><img src="img/staff/kouichi.webp" alt="KOUICHI" loading="lazy"></div>
+        <div class="st-ph"><img src="img/staff/kouichi.webp" alt="KOUICHI" loading="lazy" width="600" height="800"></div>
         <p class="st-role">オーナースタイリスト</p><h3>KOUICHI</h3>
         <p class="st-k">得意な技術</p><ul class="st-tags"><li>ストカール（くせ毛を活かす）</li><li>ブリーチなしの白髪ぼかし</li><li>カラー</li><li>パーマ</li><li>カット</li></ul>
         <p class="st-owner"><span>自己紹介</span>オフコース代表のKOUICHIです。37年の経験をもとに、髪と頭皮をできるだけ傷めない施術を心がけています。得意なのは、くせ毛を活かしたストカール（ストレートパーマと毛先のパーマを同時にかける施術）。白髪ぼかしはブリーチを使わず、ご来店のたびに少しずつ明るさや色味を出して「育てていく」染め方で、色持ち・艶・質感のよい髪に仕上げます。髪のお悩み、なんでもご相談ください。</p>
       </article>
       <article class="st-card">
-        <div class="st-ph"><img src="img/staff/nakamoto.webp" alt="中元 香" loading="lazy"></div>
+        <div class="st-ph"><img src="img/staff/nakamoto.webp" alt="中元 香" loading="lazy" width="600" height="800"></div>
         <p class="st-role">着付け・ブライダル</p><h3>中元 香</h3><p class="st-lic">1級着付け技能士／ブライダルコーディネーター</p>
         <p class="st-k">得意な技術</p><ul class="st-tags"><li>振袖・訪問着の着付け</li><li>ブライダルコーディネート</li><li>フォト・ロケーションウエディング</li><li>ホテルウエディング</li><li>フェイシャル・デコルテエステ</li><li>ブライダルエステ</li></ul>
         <p class="st-owner"><span>自己紹介</span>中元 香です。1級着付け技能士・ブライダルコーディネーターとして、成人式や前撮りの着付けのほか、フォトウエディングやロケーションウエディング、鹿児島市内のホテルウエディングも数多く担当してきました。自由が丘クリニックの化粧品を使ったデコルテから上のエステや、ご結婚式前のブライダルエステも行っています（個室完備）。なんでもお気軽にお尋ねください。</p>
       </article>
       <article class="st-card">
-        <div class="st-ph"><img src="img/staff/koba.webp" alt="木場 小百合" loading="lazy"></div>
+        <div class="st-ph"><img src="img/staff/koba.webp" alt="木場 小百合" loading="lazy" width="600" height="800"></div>
         <p class="st-role">スタイリスト</p><h3>木場 小百合</h3>
         <p class="st-k">得意な技術</p><ul class="st-tags"><li>白髪ぼかし</li><li>アップスタイル・ヘアセット</li><li>新日本髪</li><li>七五三のセット・アップ</li><li>ロングのハイレイヤーカット</li><li>カット・パーマ・カラー</li></ul>
         <p class="st-owner"><span>自己紹介</span>木場 小百合です。カット・パーマ・カラーのほか、白髪ぼかしや、洋風・和風のアップスタイル・ヘアセットを得意としています。特に新日本髪や七五三のセット・アップはおまかせください。カットではロングのハイレイヤーが得意です。毎日のお手入れがしやすいスタイルをご提案しますので、ぜひご相談ください。</p>
       </article>
       <article class="st-card">
-        <div class="st-ph"><img src="img/staff/kiwaki.webp" alt="木脇 麻未" loading="lazy"></div>
+        <div class="st-ph"><img src="img/staff/kiwaki.webp" alt="木脇 麻未" loading="lazy" width="600" height="800"></div>
         <p class="st-role">スタイリスト</p><h3>木脇 麻未</h3>
         <p class="st-k">得意な技術</p><ul class="st-tags"><li>ナチュラルな癒し系スタイル</li><li>ヘッドスパ</li><li>トリートメント調合</li><li>セット・アップ・着付け</li><li>カット・パーマ・カラー</li></ul>
         <p class="st-owner"><span>自己紹介</span>木脇 麻未です。ママさん美容師をしています。ナチュラルで癒し系のヘアスタイルが得意です。お話ししながら、かわいい・かっこいいスタイルを一緒に楽しく作っていけたらうれしいです。ヘッドスパや、髪をきれいにするトリートメントの調合も得意。セット・アップや着付けもいたします。</p>
       </article>
       <article class="st-card">
-        <div class="st-ph"><img src="img/staff/moromugi.webp" alt="諸麦 有泉" loading="lazy"></div>
+        <div class="st-ph"><img src="img/staff/moromugi.webp" alt="諸麦 有泉" loading="lazy" width="600" height="800"></div>
         <p class="st-role">スタイリスト</p><h3>諸麦 有泉</h3>
         <p class="st-k">得意な技術</p><ul class="st-tags"><li>スキャルプエステ（ヘッドスパ）</li><li>ホイルワークのデザインカラー</li><li>透明感カラー</li><li>メイク</li><li>カット・パーマ・カラー</li></ul>
         <p class="st-owner"><span>自己紹介</span>諸麦 有泉です。2児のママさん美容師で、スキャルプエステ（ヘッドスパ）が得意な「癒し美容師」を目指しています。ホイルワークを使ったデザインカラーや透明感のあるカラー、メイクも得意です。ゆっくりくつろげる時間をお届けします。</p>
@@ -507,7 +508,7 @@ footer p{margin:0;letter-spacing:.06em}
 </section>
 
 <div class="interior">
-  <img src="img/interior.webp" alt="オフコース店内。セット面と窓からの自然光" loading="lazy">
+  <img src="img/interior.webp" alt="オフコース店内。セット面と窓からの自然光" loading="lazy" width="1400" height="932">
 </div>
 
 <section class="reserve" id="reserve">
@@ -614,7 +615,7 @@ footer p{margin:0;letter-spacing:.06em}
 
 <footer>
   <div class="wrap">
-    <img src="img/logo.webp" alt="TOTAL BEAUTY DESIGN OFF COURSE">
+    <img src="img/logo.webp" alt="TOTAL BEAUTY DESIGN OFF COURSE" width="1200" height="484">
     <p>TOTAL BEAUTY DESIGN OFF COURSE ― 〒892-0816 鹿児島県鹿児島市山下町9-1 チャイムズビル402　TEL 099-224-0253</p>
   </div>
 </footer>
