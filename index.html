@@ -278,9 +278,10 @@ behold-widget{display:block;min-height:320px}
 .pt-good .pt-rule-t{color:var(--brown-deep)}
 .pt-ex{margin-top:8px!important;background:#fff;border-radius:4px;padding:8px 12px;font-size:14px}
 .pt-ex span{display:block;font-size:12px;color:var(--muted)}
-.pt-ex b{color:#b5462f}
+.pt-ex b,.pt-red{color:#b5462f}
 .pt-limit{background:#fdf1ee;border-left:4px solid #c0563c}
 .pt-limit .pt-rule-t{color:#a8402a}
+.pt-limit p+p{margin-top:6px}
 @media (max-width:860px){
   .member{grid-template-columns:1fr}
   .ptbox{padding:22px 16px}
@@ -482,6 +483,10 @@ behold-widget{display:block;min-height:320px}
         <div class="tk tk-best"><span class="tk-badge">いちばんお得</span><span class="tk-p">100P</span><span class="tk-y">¥8,500<small>引き</small></span></div>
       </div>
       <div class="pt-rule pt-good">
+        <p class="pt-rule-t">貯めてから使うほど、割引率がお得です</p>
+        <p>1ポイントあたりの割引額は、20Pなら¥50、100Pなら¥85。20Pずつ5回使うと合計¥5,000引きですが、100Pまで貯めて使うと¥8,500引きで、<b class="pt-red">¥3,500お得</b>になります。</p>
+      </div>
+      <div class="pt-rule pt-good">
         <p class="pt-rule-t">メンバーズ10%OFFの「さらに上から」割引できます</p>
         <p>会員価格（10%OFF）になった料金から、さらにチケットの金額を割り引きます。</p>
         <p class="pt-ex"><span>例）オーナーカット</span>通常 ¥5,830 → 会員価格 ¥5,247 → <b>20Pチケットで ¥4,247</b></p>
@@ -489,6 +494,8 @@ behold-widget{display:block;min-height:320px}
       <div class="pt-rule pt-limit">
         <p class="pt-rule-t">ご注意：1回のご来店で割り引けるのは ¥2,000 まで</p>
         <p>100P（¥8,500）のチケットでも、一度に ¥8,500 引きにはできません。1回のお会計で割り引ける上限は ¥2,000 です。</p>
+        <p>¥2,000を超える分は、次回以降のご来店で続けてお使いいただけます。</p>
+        <p class="pt-ex"><span>例）100Pチケット（¥8,500分）の場合</span>¥2,000 × 4回 ＋ ¥500 × 1回 に分けてご利用</p>
       </div>
     </div>
     <p class="note">下記の「メンバー」価格が会員価格です。</p>
