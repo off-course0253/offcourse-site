@@ -260,39 +260,33 @@ behold-widget{display:block;min-height:320px}
 .member{grid-template-columns:auto 1fr}
 .member li{display:block;position:relative;padding-left:19px}
 .member li::before{position:absolute;left:0;top:.75em}
-.ptbox{background:#fff;border:1px solid var(--gold-soft);border-radius:6px;padding:24px 26px;margin-bottom:16px}
-.pt-head{font-size:20px;color:var(--brown-deep);margin:0 0 16px;text-align:center}
-.pt-head small{display:block;font-family:var(--sans);font-size:13px;font-weight:500;color:var(--gold);letter-spacing:.06em;margin-top:2px}
-.tickets{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:0 0 20px}
-.tk{position:relative;background:var(--brown);color:#fff;border-radius:8px;padding:18px 8px 16px;text-align:center;outline:1px dashed rgba(255,255,255,.45);outline-offset:-6px}
-.tk-p{display:block;font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.1em;color:var(--gold-soft)}
-.tk-y{display:block;font-family:var(--sans);font-size:28px;font-weight:700;line-height:1.25}
-.tk-y small{font-size:14px;margin-left:2px}
-.tk-best{background:var(--gold)}
-.tk-best .tk-p{color:#fff}
-.tk-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:#fff;color:var(--gold);border:1px solid var(--gold);border-radius:20px;font-size:11px;font-weight:700;padding:1px 10px;white-space:nowrap}
-.pt-noexp{text-align:center;margin:-6px 0 8px;font-size:15px;color:var(--brown-deep)}
-.pt-noexp b{color:#b5462f;font-size:17px}
-.pt-bday{background:var(--cream-2,#f3ebe0);border-left:4px solid var(--brown)}
-.pt-bday ul{margin:0;padding-left:1.2em}
-.pt-bday li{margin:2px 0}
-.pt-rule{border-radius:6px;padding:14px 18px;margin-top:12px;font-size:14.5px;line-height:1.8}
-.pt-rule p{margin:0}
-.pt-rule-t{font-weight:700;font-size:16px;margin-bottom:4px!important}
-.pt-good{background:var(--cream-2,#f3ebe0);border-left:4px solid var(--gold)}
-.pt-good .pt-rule-t{color:var(--brown-deep)}
-.pt-ex{margin-top:8px!important;background:#fff;border-radius:4px;padding:8px 12px;font-size:14px}
-.pt-ex span{display:block;font-size:12px;color:var(--muted)}
-.pt-ex b,.pt-red{color:#b5462f}
-.pt-limit{background:#fdf1ee;border-left:4px solid #c0563c}
-.pt-limit .pt-rule-t{color:#a8402a}
-.pt-limit p+p{margin-top:6px}
-@media (max-width:860px){
-  .member{grid-template-columns:1fr}
-  .ptbox{padding:22px 16px}
-  .tickets{grid-template-columns:repeat(2,1fr);gap:14px 10px}
-  .tk-best{grid-column:1/-1}
-  .tk-y{font-size:30px}
+.ptbox{background:#fff;border:1px solid var(--gold-soft);border-radius:6px;padding:26px 28px;margin-bottom:16px}
+.pt-head{font-size:21px;color:var(--brown-deep);margin:0 0 18px;text-align:center}
+.pt-head small{display:block;font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--gold);letter-spacing:.04em;margin-top:4px}
+.ladder{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:10px}
+.ld{display:grid;grid-template-columns:64px 1fr 150px;align-items:center;gap:12px}
+.ld-p{font-family:var(--sans);font-weight:700;font-size:18px;color:var(--brown-deep);text-align:right}
+.ld-bar{background:var(--brown);color:#fff;border-radius:6px;padding:10px 14px;font-size:14px;white-space:nowrap;box-sizing:border-box;min-width:150px}
+.ld-bar b{font-family:var(--sans);font-size:24px;margin-right:2px}
+.ld-per{font-size:13px;color:var(--muted)}
+.ld-per em{display:inline-block;font-style:normal;background:var(--gold);color:#fff;font-size:11px;font-weight:700;border-radius:20px;padding:1px 9px;margin-left:6px}
+.ld.best .ld-bar{background:var(--gold)}
+.ld.best .ld-per{color:var(--brown-deep);font-weight:700}
+.pt-rules{background:var(--cream-2,#f3ebe0);border-radius:6px;padding:16px 20px}
+.pt-rules-t{margin:0 0 6px;font-weight:700;font-size:16px;color:var(--brown-deep)}
+.pt-rules ol{margin:0;padding-left:1.4em;font-size:14.5px;line-height:1.8}
+.pt-rules li{margin:6px 0}
+.pt-rules li>b{color:#a8402a}
+.pt-rules .ex{display:inline-block;margin-top:2px;font-size:13px;color:var(--muted)}
+.pt-rules .ex b{color:#a8402a}
+@media (max-width:860px){.member{grid-template-columns:1fr}}
+@media (max-width:600px){
+  .ptbox{padding:22px 14px}
+  .ld{grid-template-columns:48px 1fr;row-gap:2px}
+  .ld-p{font-size:16px}
+  .ld-per{grid-column:2;font-size:12px}
+  .ld-bar{min-width:0}
+  .ld-bar b{font-size:22px}
 }
 </style>
 </head>
@@ -475,41 +469,26 @@ behold-widget{display:block;min-height:320px}
       <ul>
         <li>技術料金が<em>1年間10%OFF</em></li>
         <li>お会計¥4,000ごとに<em>1ポイント</em>進呈</li>
-        <li>お誕生日に<em>30%OFFチケット</em>をプレゼント（お誕生日の前後15日間有効）</li>
+        <li>お誕生日に<em>30%OFFチケット</em>をプレゼント（お誕生日の前後15日間有効。期間後は¥1,000割引チケットとして使えます）</li>
       </ul>
     </div>
     <div class="ptbox">
-      <h3 class="pt-head">ポイント割引チケット<small>ポイントを貯めるほど、割引額が大きくなります</small></h3>
-      <div class="tickets">
-        <div class="tk"><span class="tk-p">20P</span><span class="tk-y">¥1,000<small>引き</small></span></div>
-        <div class="tk"><span class="tk-p">40P</span><span class="tk-y">¥2,000<small>引き</small></span></div>
-        <div class="tk"><span class="tk-p">60P</span><span class="tk-y">¥4,500<small>引き</small></span></div>
-        <div class="tk"><span class="tk-p">80P</span><span class="tk-y">¥6,500<small>引き</small></span></div>
-        <div class="tk tk-best"><span class="tk-badge">いちばんお得</span><span class="tk-p">100P</span><span class="tk-y">¥8,500<small>引き</small></span></div>
-      </div>
-      <p class="pt-noexp">ポイントに<b>有効期限はありません</b>。ご自分のペースでゆっくり貯められます。</p>
-      <div class="pt-rule pt-good">
-        <p class="pt-rule-t">貯めてから使うほど、割引率がお得です</p>
-        <p>1ポイントあたりの割引額は、20Pなら¥50、100Pなら¥85。20Pずつ5回使うと合計¥5,000引きですが、100Pまで貯めて使うと¥8,500引きで、<b class="pt-red">¥3,500お得</b>になります。</p>
-      </div>
-      <div class="pt-rule pt-good">
-        <p class="pt-rule-t">メンバーズ10%OFFの「さらに上から」割引できます</p>
-        <p>会員価格（10%OFF）になった料金から、さらにチケットの金額を割り引きます。</p>
-        <p class="pt-ex"><span>例）オーナーカット</span>通常 ¥5,830 → 会員価格 ¥5,247 → <b>20Pチケットで ¥4,247</b></p>
-      </div>
-      <div class="pt-rule pt-limit">
-        <p class="pt-rule-t">ご注意：1回のご来店で割り引けるのは ¥2,000 まで</p>
-        <p>100P（¥8,500）のチケットでも、一度に ¥8,500 引きにはできません。1回のお会計で割り引ける上限は ¥2,000 です。</p>
-        <p>¥2,000を超える分は、次回以降のご来店で続けてお使いいただけます。</p>
-        <p class="pt-ex"><span>例）100Pチケット（¥8,500分）の場合</span>¥2,000 × 4回 ＋ ¥500 × 1回 に分けてご利用</p>
-      </div>
-      <div class="pt-rule pt-bday">
-        <p class="pt-rule-t">お誕生日30%OFFチケットについて</p>
-        <ul>
-          <li>ご自身のお誕生日をはさんで<b>前後15日間</b>お使いいただけます。</li>
-          <li>期間を過ぎても、<b>¥1,000割引チケット</b>としてお使いいただけます。</li>
-          <li>ポイント割引チケットとの<b class="pt-red">併用はできません</b>。</li>
-        </ul>
+      <h3 class="pt-head">ポイント割引チケット<small>貯めるほど、割引額も割引率もアップします</small></h3>
+      <ul class="ladder">
+        <li class="ld"><span class="ld-p">20P</span><span class="ld-bar" style="width:45%"><b>¥1,000</b>引き</span><span class="ld-per">1Pあたり¥50</span></li>
+        <li class="ld"><span class="ld-p">40P</span><span class="ld-bar" style="width:53%"><b>¥2,000</b>引き</span><span class="ld-per">1Pあたり¥50</span></li>
+        <li class="ld"><span class="ld-p">60P</span><span class="ld-bar" style="width:71%"><b>¥4,500</b>引き</span><span class="ld-per">1Pあたり¥75</span></li>
+        <li class="ld"><span class="ld-p">80P</span><span class="ld-bar" style="width:85%"><b>¥6,500</b>引き</span><span class="ld-per">1Pあたり約¥81</span></li>
+        <li class="ld best"><span class="ld-p">100P</span><span class="ld-bar" style="width:100%"><b>¥8,500</b>引き</span><span class="ld-per">1Pあたり¥85<em>いちばんお得</em></span></li>
+      </ul>
+      <div class="pt-rules">
+        <p class="pt-rules-t">ご利用のきまり</p>
+        <ol>
+          <li><b>会員価格（10%OFF）から、さらに割引</b><br><span class="ex">例）オーナーカット　¥5,830 → 会員価格 ¥5,247 → 20Pチケットで <b>¥4,247</b></span></li>
+          <li><b>1回のご来店で割り引けるのは ¥2,000 まで</b>。残りは次回以降に使えます。<br><span class="ex">例）100P（¥8,500分）→ ¥2,000 × 4回 ＋ ¥500</span></li>
+          <li>ポイントに<b>有効期限はありません</b>。</li>
+          <li>お誕生日30%OFFチケットとの<b>併用はできません</b>。</li>
+        </ol>
       </div>
     </div>
     <p class="note">下記の「メンバー」価格が会員価格です。</p>
