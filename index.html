@@ -257,6 +257,37 @@ footer p{margin:0;letter-spacing:.06em}
 .st-owner span{display:block;font-size:11px;color:var(--gold);font-weight:700;letter-spacing:.1em;margin-bottom:2px}
 .st-msg{margin:12px 0 0;font-size:13.5px;line-height:1.8;color:var(--ink)}
 behold-widget{display:block;min-height:320px}
+.member{grid-template-columns:auto 1fr}
+.member li{display:block;position:relative;padding-left:19px}
+.member li::before{position:absolute;left:0;top:.75em}
+.ptbox{background:#fff;border:1px solid var(--gold-soft);border-radius:6px;padding:24px 26px;margin-bottom:16px}
+.pt-head{font-size:20px;color:var(--brown-deep);margin:0 0 16px;text-align:center}
+.pt-head small{display:block;font-family:var(--sans);font-size:13px;font-weight:500;color:var(--gold);letter-spacing:.06em;margin-top:2px}
+.tickets{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:0 0 20px}
+.tk{position:relative;background:var(--brown);color:#fff;border-radius:8px;padding:18px 8px 16px;text-align:center;outline:1px dashed rgba(255,255,255,.45);outline-offset:-6px}
+.tk-p{display:block;font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.1em;color:var(--gold-soft)}
+.tk-y{display:block;font-family:var(--sans);font-size:28px;font-weight:700;line-height:1.25}
+.tk-y small{font-size:14px;margin-left:2px}
+.tk-best{background:var(--gold)}
+.tk-best .tk-p{color:#fff}
+.tk-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:#fff;color:var(--gold);border:1px solid var(--gold);border-radius:20px;font-size:11px;font-weight:700;padding:1px 10px;white-space:nowrap}
+.pt-rule{border-radius:6px;padding:14px 18px;margin-top:12px;font-size:14.5px;line-height:1.8}
+.pt-rule p{margin:0}
+.pt-rule-t{font-weight:700;font-size:16px;margin-bottom:4px!important}
+.pt-good{background:var(--cream-2,#f3ebe0);border-left:4px solid var(--gold)}
+.pt-good .pt-rule-t{color:var(--brown-deep)}
+.pt-ex{margin-top:8px!important;background:#fff;border-radius:4px;padding:8px 12px;font-size:14px}
+.pt-ex span{display:block;font-size:12px;color:var(--muted)}
+.pt-ex b{color:#b5462f}
+.pt-limit{background:#fdf1ee;border-left:4px solid #c0563c}
+.pt-limit .pt-rule-t{color:#a8402a}
+@media (max-width:860px){
+  .member{grid-template-columns:1fr}
+  .ptbox{padding:22px 16px}
+  .tickets{grid-template-columns:repeat(2,1fr);gap:14px 10px}
+  .tk-best{grid-column:1/-1}
+  .tk-y{font-size:30px}
+}
 </style>
 </head>
 <body>
@@ -437,14 +468,27 @@ behold-widget{display:block;min-height:320px}
       <div class="fee"><small>年会費</small><strong>¥550</strong><span>（税抜¥500）</span></div>
       <ul>
         <li>技術料金が<em>1年間10%OFF</em></li>
-        <li>¥4,000ごとに1ポイント進呈（1回のご利用は¥2,000まで）</li>
+        <li>お会計¥4,000ごとに<em>1ポイント</em>進呈</li>
         <li>誕生日月は<em>30%OFFチケット</em>をプレゼント</li>
       </ul>
-      <div class="points">
-        <span class="pt-title">ポイントを貯めるほど割引額がアップ</span>
-        <div class="chips">
-          <span><b>20P</b>¥1,000</span><span><b>40P</b>¥2,000</span><span><b>60P</b>¥4,500</span><span><b>80P</b>¥6,500</span><span><b>100P</b>¥8,500</span>
-        </div>
+    </div>
+    <div class="ptbox">
+      <h3 class="pt-head">ポイント割引チケット<small>ポイントを貯めるほど、割引額が大きくなります</small></h3>
+      <div class="tickets">
+        <div class="tk"><span class="tk-p">20P</span><span class="tk-y">¥1,000<small>引き</small></span></div>
+        <div class="tk"><span class="tk-p">40P</span><span class="tk-y">¥2,000<small>引き</small></span></div>
+        <div class="tk"><span class="tk-p">60P</span><span class="tk-y">¥4,500<small>引き</small></span></div>
+        <div class="tk"><span class="tk-p">80P</span><span class="tk-y">¥6,500<small>引き</small></span></div>
+        <div class="tk tk-best"><span class="tk-badge">いちばんお得</span><span class="tk-p">100P</span><span class="tk-y">¥8,500<small>引き</small></span></div>
+      </div>
+      <div class="pt-rule pt-good">
+        <p class="pt-rule-t">メンバーズ10%OFFの「さらに上から」割引できます</p>
+        <p>会員価格（10%OFF）になった料金から、さらにチケットの金額を割り引きます。</p>
+        <p class="pt-ex"><span>例）オーナーカット</span>通常 ¥5,830 → 会員価格 ¥5,247 → <b>20Pチケットで ¥4,247</b></p>
+      </div>
+      <div class="pt-rule pt-limit">
+        <p class="pt-rule-t">ご注意：1回のご来店で割り引けるのは ¥2,000 まで</p>
+        <p>100P（¥8,500）のチケットでも、一度に ¥8,500 引きにはできません。1回のお会計で割り引ける上限は ¥2,000 です。</p>
       </div>
     </div>
     <p class="note">下記の「メンバー」価格が会員価格です。</p>
