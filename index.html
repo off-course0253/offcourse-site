@@ -259,6 +259,24 @@ footer p{margin:0;letter-spacing:.06em}
 .st-owner span{display:block;font-size:11px;color:var(--gold);font-weight:700;letter-spacing:.1em;margin-bottom:2px}
 .st-msg{margin:12px 0 0;font-size:13.5px;line-height:1.8;color:var(--ink)}
 behold-widget{display:block;min-height:320px}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;min-height:240px}
+.ig-cell{position:relative;padding:0;border:0;background:#eee;cursor:pointer;aspect-ratio:1/1;overflow:hidden;border-radius:4px}
+.ig-cell img{width:100%;height:100%;object-fit:cover;display:block}
+.ig-multi{position:absolute;top:6px;right:8px;color:#fff;font-size:18px;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.ig-pop{position:fixed;inset:0;z-index:60;background:rgba(46,36,32,.9);display:flex;align-items:center;justify-content:center;padding:16px}
+.ig-pop[hidden]{display:none}
+.ig-box{position:relative;background:#fff;border-radius:12px;max-width:520px;width:100%;max-height:92vh;display:flex;flex-direction:column;overflow:hidden}
+.ig-media{position:relative;background:#111}
+.ig-media img{display:block;width:100%;max-height:60vh;object-fit:contain}
+.ig-x{position:absolute;top:8px;right:8px;z-index:2;width:42px;height:42px;border-radius:999px;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.ig-nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:999px;border:0;background:rgba(255,255,255,.85);color:#3f2a22;font-size:28px;line-height:1;cursor:pointer}
+.ig-nav[hidden]{display:none}
+.ig-prev{left:8px}.ig-next{right:8px}
+.ig-count{position:absolute;bottom:6px;left:0;right:0;text-align:center;color:#fff;font-size:12px;margin:0;text-shadow:0 1px 2px #000}
+.ig-body{padding:14px 16px 16px;overflow:auto}
+.ig-cap{white-space:pre-wrap;font-size:14px;line-height:1.75;margin:0 0 14px;color:var(--ink,#3f2a22)}
+.ig-open{display:block;text-align:center}
+
 .member{grid-template-columns:auto 1fr}
 .member li{display:block;position:relative;padding-left:19px}
 .member li::before{position:absolute;left:0;top:.75em}
@@ -414,14 +432,48 @@ behold-widget{display:block;min-height:320px}
 <section class="insta" id="instagram" style="padding:56px 0;background:var(--paper);border-top:1px solid var(--gold-soft);border-bottom:1px solid var(--gold-soft)">
   <div class="wrap">
     <div class="sec-head"><h2>Instagram 最新の投稿</h2><p>INSTAGRAM</p></div>
-    <behold-widget feed-id="ELOAybFblvDVQgf0Y5dz"></behold-widget>
+    <div class="ig-grid" id="ig-grid" aria-live="polite"></div>
+    <div class="ig-pop" id="ig-pop" hidden role="dialog" aria-modal="true" aria-label="Instagramの投稿">
+      <div class="ig-box">
+        <button class="ig-x" type="button" aria-label="閉じる">×</button>
+        <div class="ig-media"><img id="ig-img" alt=""><button class="ig-nav ig-prev" type="button" aria-label="前の写真">‹</button><button class="ig-nav ig-next" type="button" aria-label="次の写真">›</button><p class="ig-count" id="ig-count"></p></div>
+        <div class="ig-body"><p class="ig-cap" id="ig-cap"></p><a class="more-btn ig-open" id="ig-open" href="https://www.instagram.com/offc.ourse2409/" target="_blank" rel="noopener">Instagramで見る</a></div>
+      </div>
+    </div>
     <script>
-      (() => {
-        if (window.__bhldScript) return; window.__bhldScript = true;
-        const d = document, s = d.createElement("script"); s.type = "module";
-        s.src = "https://w.behold.so/widget.js";
-        setTimeout(() => { d.head.append(s) }, 0);
-      })();
+    (function(){
+      var FEED='https://feeds.behold.so/ELOAybFblvDVQgf0Y5dz';
+      var grid=document.getElementById('ig-grid'),pop=document.getElementById('ig-pop'),img=document.getElementById('ig-img'),cap=document.getElementById('ig-cap'),cnt=document.getElementById('ig-count'),open=document.getElementById('ig-open');
+      var items=[],cur=null,idx=0,last=null;
+      function pick(m){return (m.sizes&&m.sizes.medium&&m.sizes.medium.mediaUrl)||(m.mediaType==='VIDEO'?m.thumbnailUrl:m.mediaUrl)||m.thumbnailUrl||'';}
+      function big(m){return (m.sizes&&m.sizes.large&&m.sizes.large.mediaUrl)||pick(m);}
+      function fallback(){
+        var w=document.createElement('behold-widget');w.setAttribute('feed-id','ELOAybFblvDVQgf0Y5dz');grid.replaceWith(w);
+        var sc=document.createElement('script');sc.type='module';sc.src='https://w.behold.so/widget.js';document.head.appendChild(sc);
+      }
+      function show(){var list=cur.list;img.src=list[idx];cnt.textContent=list.length>1?(idx+1)+' / '+list.length:'';pop.querySelectorAll('.ig-nav').forEach(function(b){b.hidden=list.length<2;});}
+      function openPost(i){cur=items[i];idx=0;cap.textContent=cur.caption;open.href=cur.link;show();last=document.activeElement;pop.hidden=false;document.body.style.overflow='hidden';pop.querySelector('.ig-x').focus();}
+      function close(){pop.hidden=true;document.body.style.overflow='';if(last)last.focus();}
+      pop.querySelector('.ig-x').addEventListener('click',close);
+      pop.addEventListener('click',function(e){if(e.target===pop)close();});
+      pop.querySelector('.ig-prev').addEventListener('click',function(){idx=(idx-1+cur.list.length)%cur.list.length;show();});
+      pop.querySelector('.ig-next').addEventListener('click',function(){idx=(idx+1)%cur.list.length;show();});
+      document.addEventListener('keydown',function(e){if(pop.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')pop.querySelector('.ig-prev').click();else if(e.key==='ArrowRight')pop.querySelector('.ig-next').click();});
+      var sx=null;pop.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+      pop.addEventListener('touchend',function(e){if(sx===null||!cur||cur.list.length<2)return;var dx=e.changedTouches[0].clientX-sx;if(dx>50)pop.querySelector('.ig-prev').click();else if(dx<-50)pop.querySelector('.ig-next').click();sx=null;});
+      fetch(FEED).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
+        var posts=(d&&d.posts)||[];if(!posts.length)throw 0;
+        posts.slice(0,6).forEach(function(p,i){
+          var kids=(p.children&&p.children.length)?p.children:[p];
+          var list=kids.map(big).filter(Boolean);var thumb=pick(p);if(!thumb||!list.length)return;
+          items.push({list:list,caption:(p.caption||'').trim(),link:p.permalink||'https://www.instagram.com/offc.ourse2409/'});
+          var b=document.createElement('button');b.type='button';b.className='ig-cell';b.setAttribute('aria-label','Instagramの投稿を大きく見る');
+          b.innerHTML='<img loading="lazy" alt="" width="400" height="400">'+(kids.length>1?'<span class="ig-multi" aria-hidden="true">❐</span>':'');
+          b.querySelector('img').src=thumb;var n=items.length-1;b.addEventListener('click',function(){openPost(n);});grid.appendChild(b);
+        });
+        if(!items.length)throw 0;
+      }).catch(fallback);
+    })();
     </script>
     <div class="more-wrap"><a class="more-btn" href="https://www.instagram.com/offc.ourse2409/" target="_blank" rel="noopener">Instagramをもっと見る（@offc.ourse2409）</a></div>
   </div>
