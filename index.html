@@ -290,6 +290,15 @@ behold-widget{display:block;min-height:320px}
   .ld-bar{min-width:0}
   .ld-bar b{font-size:22px}
 }
+.quick{padding:8px 0 40px}
+.quick-t{font-size:13px;letter-spacing:.2em;color:var(--gold);font-weight:700;margin:0 0 10px;text-align:center}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.qk{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid #B78A2E;border-radius:12px;padding:10px;text-decoration:none;color:var(--brown-deep);box-shadow:0 6px 14px -10px rgba(63,42,34,.5)}
+.qk img{width:72px;height:72px;object-fit:cover;border-radius:8px;flex:none}
+.qk b{display:block;font-size:16px;line-height:1.4}
+.qk small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.qk::after{content:"›";margin-left:auto;font-size:26px;color:#B78A2E;padding-right:4px}
+@media (max-width:860px){.quick-grid{grid-template-columns:1fr;gap:10px}.qk img{width:64px;height:64px}}
 </style>
 </head>
 <body>
@@ -326,6 +335,17 @@ behold-widget{display:block;min-height:320px}
       <img fetchpriority="high" src="img/store.webp" alt="チャイムズビル外観と TOTAL BEAUTY DESIGN OFF COURSE の看板" width="800" height="533">
       <figcaption>鹿児島市山下町9-1　チャイムズビル402</figcaption>
     </figure>
+  </div>
+</section>
+
+<section class="quick" aria-label="人気のページ">
+  <div class="wrap">
+    <p class="quick-t">人気のページ</p>
+    <div class="quick-grid">
+      <a class="qk" href="blog/pc-color-shiraga.html"><img src="img/blog/pc-after-front.webp" alt="" width="160" height="160"><span><b>白髪ぼかし</b><small>ブリーチなし・ワンステップ</small></span></a>
+      <a class="qk" href="gallery.html"><img src="img/gallery/s18-front.webp" alt="" width="160" height="160"><span><b>スタイルギャラリー</b><small>正面・横・後ろで見る</small></span></a>
+      <a class="qk" href="gallery.html#kimono"><img src="img/kimono/k02-front.webp" alt="" width="160" height="160"><span><b>成人式・着付け・ブライダル</b><small>振袖・浴衣・ドレス</small></span></a>
+    </div>
   </div>
 </section>
 
@@ -368,6 +388,8 @@ behold-widget{display:block;min-height:320px}
   <div class="wrap">
     <div class="sec-head"><h2>ブログ</h2><p>BLOG</p></div>
     <ul class="blog-list">
+      <li><a class="blog-card" href="blog/wolf-transition.html"><img src="img/blog/wolf-front.webp" alt="" width="900" height="1200">
+      <div><p class="post-date">2026.11.13</p><h3>ハンサムショートからウルフへ。伸ばしかけも素敵に見える、ブリーチなしの赤みカラー</h3><p>伸ばしかけの時期も形よく。ブリーチなし・ワンステップの赤みカラーで、白髪も自然にぼかしました。</p></div></a></li>
       <li><a class="blog-card" href="blog/mens-wave.html"><img src="img/blog/mens-front.webp" alt="" width="900" height="1200">
       <div><p class="post-date">2026.11.05</p><h3>無造作ウェーブ×刈り上げで、大人のメンズショート</h3><p>くせ毛を活かしたカットで、トップに自然なウェーブ。サイドと襟足は刈り上げですっきり。担当：木場</p></div></a></li>
       <li><a class="blog-card" href="blog/moroccan-oil.html"><img src="img/blog/moroccan-open.webp" alt="" width="900" height="1200">
